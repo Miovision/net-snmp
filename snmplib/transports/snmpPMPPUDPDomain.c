@@ -396,7 +396,7 @@ netsnmp_pmppudp_transport(struct sockaddr_in *addr, int local)
 
     memset(&myinfo, 0, sizeof(struct sockaddr_in));
     myinfo.sin_family = AF_INET;
-    myinfo.sin_port = addr->sin_port;
+    myinfo.sin_port = 0;
     myinfo.sin_addr.s_addr = INADDR_ANY;
 
     optval = 1;
