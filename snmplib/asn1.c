@@ -606,7 +606,7 @@ asn_parse_int(u_char * data,
         return NULL;
     }
 
-    if ((size_t) asn_length > intsize || (int) asn_length == 0) {
+    if ((size_t) asn_length > intsize + 1 || (int) asn_length == 0) {
         _asn_length_err(errpre, (size_t) asn_length, intsize);
         return NULL;
     }
